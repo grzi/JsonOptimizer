@@ -7,22 +7,22 @@ import org.junit.Test;
 
 import com.jsono.IEngine;
 import com.jsono.JsonOptimizerFactory;
-import com.jsono.JsonO;
+import com.jsono.JsonEncoder;
 
 
 public class JsonOptimizerFactoryTest {
 
 	@Test
-	public void testInitReader() {
-		IEngine reader = JsonOptimizerFactory.getReader();
-		assertThat(reader, instanceOf(JsonO.class));
+	public void testInitEncoder() {
+		JsonEncoder reader = JsonOptimizerFactory.getEncoder();
+		assertThat(reader, instanceOf(JsonEncoder.class));
 	}
 	
 	@Test
-	public void testSingletonReader(){
-		JsonO.getInstance();
-		IEngine first = JsonOptimizerFactory.getReader();
-		IEngine second = JsonOptimizerFactory.getReader();
+	public void testSingletonEncoder(){
+		JsonEncoder.getInstance();
+		IEngine first = JsonOptimizerFactory.getEncoder();
+		IEngine second = JsonOptimizerFactory.getEncoder();
 		assertSame(first,second);
 	}
 }
