@@ -8,10 +8,10 @@ public class JsonEncoder implements IEngine {
 		return JsonReaderHolder.instance;
 	}
 	
-	public OptimizedJson optimize(String toOptimize){
-		OptimizedJson optimized = new OptimizedJson();
-		optimized.setOriginJson(toOptimize);
-		optimized.setOriginClass(toOptimize.getClass().getSimpleName());
-		return optimized;
+	public OptimizedJson compress(String toOptimize){
+		OptimizedJson compressed = new OptimizedJson();
+		compressed.setOriginJson(toOptimize);
+		compressed.setOriginClass(toOptimize.getClass().getSimpleName());
+		return compressed;
 	}
 }

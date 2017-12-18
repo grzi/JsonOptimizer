@@ -11,6 +11,7 @@ public class JsonEncoderTest {
 	static final String EMPTY_STRING_JSON = "{\"\":\"\"}";
 	static final String EXEMPLE_TEXT_JSON = "{\"poire\":\"fruit\"}";
 	
+	
 	JsonEncoder encoder;
 	
 	@Before
@@ -20,16 +21,17 @@ public class JsonEncoderTest {
 	
 	@Test
 	public void testOptimize_String_NotNull(){
-		assertNotNull(encoder.optimize(EMPTY_STRING_JSON));
+		System.out.println(EXEMPLE_TEXT_JSON);
+		assertNotNull(encoder.compress(EMPTY_STRING_JSON));
 	}
 	
 	@Test
 	public void testOptimize_String_getOriginalJson(){
-		assertEquals(EMPTY_STRING_JSON,encoder.optimize(EMPTY_STRING_JSON).getOriginJson());
+		assertEquals(EMPTY_STRING_JSON,encoder.compress(EMPTY_STRING_JSON).getOriginJson());
 	}
 	
 	@Test
 	public void testOptimize_String_getOriginalJsonInfos(){
-		assertEquals("Encoded from : String",encoder.optimize(EMPTY_STRING_JSON).getOriginalJsonInfos());
+		assertEquals("Encoded from : String",encoder.compress(EMPTY_STRING_JSON).getOriginalJsonInfos());
 	}
 }
