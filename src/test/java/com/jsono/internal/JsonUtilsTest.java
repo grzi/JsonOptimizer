@@ -1,7 +1,10 @@
 package com.jsono.internal;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.Map;
+
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class JsonUtilsTest {
 	static final String EXEMPLE_TEXT_JSON_FORMATTED = "{\"poire\":\n\"fruit\"}";
@@ -13,7 +16,8 @@ public class JsonUtilsTest {
 	}
 	
 	@Test
-	public void test_getRepeatCollection(){
-		
+	public void test_getDuplicates_empty(){
+		Map<String,Duplicate> duplicates = JsonUtils.getDuplicates(EXEMPLE_TEXT_JSON);
+		assertEquals(0,duplicates.size());
 	}
 }

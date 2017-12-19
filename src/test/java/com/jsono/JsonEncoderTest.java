@@ -21,7 +21,6 @@ public class JsonEncoderTest {
 	
 	@Test
 	public void testOptimize_String_NotNull(){
-		System.out.println(EXEMPLE_TEXT_JSON);
 		assertNotNull(encoder.compress(EMPTY_STRING_JSON));
 	}
 	
