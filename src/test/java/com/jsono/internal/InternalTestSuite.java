@@ -6,7 +6,8 @@ import org.junit.runners.Suite;
 
 @Suite.SuiteClasses({
 	   DuplicateTest.class,
-	   JsonUtilsTest.class
+	   JsonUtilsTest.class,
+	   KeyGeneratorTest.class
 })
 public class InternalTestSuite {
 
