@@ -5,6 +5,7 @@ public class Duplicate {
 	private String value;
 	private int iteration;
 	private String compressedValue;
+	private String compressedValueDefinition;
 
 	@Override
 	public String toString() {
@@ -44,6 +45,14 @@ public class Duplicate {
 
 	public void setCompressedValue(String compressedValue) {
 		this.compressedValue = compressedValue;
+	}
+
+	public String getCompressedValueDefinition() {
+		return compressedValueDefinition;
+	}
+
+	public void setCompressedValueDefinition(String compressedValueDefinition) {
+		this.compressedValueDefinition = compressedValueDefinition;
 	}
 	
 	

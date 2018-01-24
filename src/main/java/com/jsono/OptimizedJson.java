@@ -12,8 +12,6 @@ public class OptimizedJson {
 		return originJson;
 	}
 
-	
-	
 	void setOriginJson(String originalJson) {
 		this.originJson = originalJson;
 	}
